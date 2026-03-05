@@ -726,7 +726,7 @@ export default function SuperNovaPortfolio() {
                       </div>
                       <div>
                         <p className="text-gray-400">Email</p>
-                        <p className="text-white font-semibold">lucasmellodev@gmail.com</p>
+                        <p className="text-white font-semibold">llucasmellodev@gmail.com</p>
                       </div>
                     </div>
                   </div>
@@ -744,6 +744,7 @@ export default function SuperNovaPortfolio() {
                       </Button>
                       <Button
                         size="sm"
+                        onClick={() => window.open("https://www.linkedin.com/company/supernovadev/", "_blank")}
                         className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600"
                       >
                         <Linkedin className="w-4 h-4 mr-2" />
