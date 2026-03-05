@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_BT8MzVhIPA0JuJOagWJTVVKOjARv",
+  "orgId": "team_jPqTtPGVnl5zDPH8xhfkbTN9",
+  "projectName": "v0-super-nova-portfolio",
+  "settings": {
+    "createdAt": 1748961037152,
+    "framework": "nextjs",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "22.x"
+  }
+}
