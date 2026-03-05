@@ -334,19 +334,8 @@ export default function SuperNovaPortfolio() {
             {/* Project 3 — Air Connect (horizontal scroll carousel) */}
             <Card className="cosmic-card bg-[#161b22]/80 border-purple-500/30 backdrop-blur-sm group hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <CardContent className="p-6 flex flex-col h-full">
-                <div className="relative mb-4 rounded-lg overflow-hidden">
-                  <div className="flex overflow-x-auto snap-x snap-mandatory" style={{scrollbarWidth: "none", msOverflowStyle: "none"}}>
-                    <div className="flex-shrink-0 w-full snap-center aspect-video">
-                      <img src="/airconnect-app.png" alt="Air Connect app" className="w-full h-full object-cover rounded-lg" />
-                    </div>
-                    <div className="flex-shrink-0 w-full snap-center aspect-video">
-                      <img src="/airconnect-splash.png" alt="Air Connect splash" className="w-full h-full object-cover rounded-lg" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 pointer-events-none">
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/80"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-white/40"></div>
-                  </div>
+                <div className="aspect-video rounded-lg mb-4 overflow-hidden">
+                  <img src="/airconnect-splash.png" alt="Air Connect" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-blue-300 mb-2">Air Connect</h3>
                 <p className="text-gray-400 mb-4">App mobile de aviação para busca e reserva de voos de passageiros e carga</p>
@@ -368,8 +357,64 @@ export default function SuperNovaPortfolio() {
             {/* Project 4 — Flow CRM */}
             <Card className="cosmic-card bg-[#161b22]/80 border-purple-500/30 backdrop-blur-sm group hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <CardContent className="p-6 flex flex-col h-full">
-                <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg mb-4 flex items-center justify-center">
-                  <Code className="w-12 h-12 text-orange-400" />
+                <div className="aspect-video bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-lg mb-4 overflow-hidden flex items-center justify-center p-3">
+                  <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                    {/* Header bar */}
+                    <rect x="0" y="0" width="320" height="28" rx="4" fill="#1a1a2e" opacity="0.8"/>
+                    <circle cx="12" cy="14" r="5" fill="#f97316" opacity="0.9"/>
+                    <rect x="24" y="10" width="60" height="8" rx="2" fill="#f97316" opacity="0.6"/>
+                    <rect x="240" y="8" width="36" height="12" rx="6" fill="#f97316" opacity="0.4"/>
+                    <rect x="282" y="8" width="32" height="12" rx="6" fill="#ea580c" opacity="0.5"/>
+                    {/* Pipeline columns */}
+                    <rect x="4" y="36" width="72" height="14" rx="3" fill="#f97316" opacity="0.7"/>
+                    <rect x="82" y="36" width="72" height="14" rx="3" fill="#fb923c" opacity="0.6"/>
+                    <rect x="160" y="36" width="72" height="14" rx="3" fill="#fdba74" opacity="0.5"/>
+                    <rect x="242" y="36" width="72" height="14" rx="3" fill="#22c55e" opacity="0.6"/>
+                    {/* Cards col 1 */}
+                    <rect x="4" y="56" width="72" height="34" rx="4" fill="#1e2a3a" stroke="#f97316" strokeWidth="0.5" opacity="0.9"/>
+                    <rect x="10" y="62" width="40" height="5" rx="2" fill="#f97316" opacity="0.8"/>
+                    <rect x="10" y="71" width="55" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="10" y="78" width="30" height="4" rx="2" fill="#94a3b8" opacity="0.4"/>
+                    <rect x="4" y="96" width="72" height="34" rx="4" fill="#1e2a3a" stroke="#f97316" strokeWidth="0.5" opacity="0.8"/>
+                    <rect x="10" y="102" width="45" height="5" rx="2" fill="#f97316" opacity="0.7"/>
+                    <rect x="10" y="111" width="55" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="10" y="118" width="25" height="4" rx="2" fill="#94a3b8" opacity="0.4"/>
+                    {/* Cards col 2 */}
+                    <rect x="82" y="56" width="72" height="34" rx="4" fill="#1e2a3a" stroke="#fb923c" strokeWidth="0.5" opacity="0.9"/>
+                    <rect x="88" y="62" width="35" height="5" rx="2" fill="#fb923c" opacity="0.8"/>
+                    <rect x="88" y="71" width="55" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="88" y="78" width="40" height="4" rx="2" fill="#94a3b8" opacity="0.4"/>
+                    <rect x="82" y="96" width="72" height="34" rx="4" fill="#1e2a3a" stroke="#fb923c" strokeWidth="0.5" opacity="0.7"/>
+                    <rect x="88" y="102" width="50" height="5" rx="2" fill="#fb923c" opacity="0.7"/>
+                    <rect x="88" y="111" width="55" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="88" y="118" width="35" height="4" rx="2" fill="#94a3b8" opacity="0.4"/>
+                    {/* Cards col 3 */}
+                    <rect x="160" y="56" width="72" height="34" rx="4" fill="#1e2a3a" stroke="#fdba74" strokeWidth="0.5" opacity="0.9"/>
+                    <rect x="166" y="62" width="42" height="5" rx="2" fill="#fdba74" opacity="0.7"/>
+                    <rect x="166" y="71" width="55" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="166" y="78" width="28" height="4" rx="2" fill="#94a3b8" opacity="0.4"/>
+                    {/* Cards col 4 - won */}
+                    <rect x="242" y="56" width="72" height="34" rx="4" fill="#14532d" stroke="#22c55e" strokeWidth="0.5" opacity="0.9"/>
+                    <rect x="248" y="62" width="38" height="5" rx="2" fill="#22c55e" opacity="0.9"/>
+                    <rect x="248" y="71" width="55" height="4" rx="2" fill="#86efac" opacity="0.5"/>
+                    <rect x="248" y="78" width="32" height="4" rx="2" fill="#86efac" opacity="0.4"/>
+                    <rect x="242" y="96" width="72" height="34" rx="4" fill="#14532d" stroke="#22c55e" strokeWidth="0.5" opacity="0.8"/>
+                    <rect x="248" y="102" width="44" height="5" rx="2" fill="#22c55e" opacity="0.8"/>
+                    <rect x="248" y="111" width="55" height="4" rx="2" fill="#86efac" opacity="0.5"/>
+                    <rect x="248" y="118" width="20" height="4" rx="2" fill="#86efac" opacity="0.4"/>
+                    {/* Bottom stats bar */}
+                    <rect x="4" y="140" width="90" height="32" rx="4" fill="#1e2a3a" opacity="0.8"/>
+                    <rect x="10" y="146" width="30" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="10" y="154" width="50" height="8" rx="2" fill="#f97316" opacity="0.8"/>
+                    <rect x="100" y="140" width="90" height="32" rx="4" fill="#1e2a3a" opacity="0.8"/>
+                    <rect x="106" y="146" width="40" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="106" y="154" width="45" height="8" rx="2" fill="#22c55e" opacity="0.8"/>
+                    <rect x="196" y="140" width="120" height="32" rx="4" fill="#1e2a3a" opacity="0.8"/>
+                    <rect x="202" y="146" width="50" height="4" rx="2" fill="#94a3b8" opacity="0.5"/>
+                    <rect x="202" y="154" width="35" height="4" rx="2" fill="#fb923c" opacity="0.6"/>
+                    <rect x="242" y="154" width="25" height="4" rx="2" fill="#fb923c" opacity="0.4"/>
+                    <rect x="272" y="154" width="38" height="4" rx="2" fill="#fb923c" opacity="0.3"/>
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold text-orange-300 mb-2">Flow CRM</h3>
                 <p className="text-gray-400 mb-4">Dashboard CRM completo com interface moderna para gestão de clientes e pipeline de vendas</p>
