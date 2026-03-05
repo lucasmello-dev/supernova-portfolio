@@ -25,6 +25,7 @@ import { TechLogo } from "@/components/tech-logo"
 export default function SuperNovaPortfolio() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [projectDescription, setProjectDescription] = useState("")
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -79,23 +80,37 @@ export default function SuperNovaPortfolio() {
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#servicos" className="hover:text-purple-400 transition-colors">
-                Serviços
-              </a>
-              <a href="#projetos" className="hover:text-purple-400 transition-colors">
-                Projetos
-              </a>
-              <a href="#sobre" className="hover:text-purple-400 transition-colors">
-                Nossa Jornada
-              </a>
-              <a href="#tecnologias" className="hover:text-purple-400 transition-colors">
-                Tecnologias
-              </a>
-              <a href="#contato" className="hover:text-purple-400 transition-colors">
-                Contato
-              </a>
+              <a href="#servicos" className="hover:text-purple-400 transition-colors">Serviços</a>
+              <a href="#projetos" className="hover:text-purple-400 transition-colors">Projetos</a>
+              <a href="#sobre" className="hover:text-purple-400 transition-colors">Nossa Jornada</a>
+              <a href="#tecnologias" className="hover:text-purple-400 transition-colors">Tecnologias</a>
+              <a href="#contato" className="hover:text-purple-400 transition-colors">Contato</a>
             </div>
+            <button
+              className="md:hidden text-white p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu"
+            >
+              <div className="w-6 h-0.5 bg-white mb-1.5 transition-all"></div>
+              <div className="w-6 h-0.5 bg-white mb-1.5 transition-all"></div>
+              <div className="w-6 h-0.5 bg-white transition-all"></div>
+            </button>
           </div>
+          {/* Mobile menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden border-t border-purple-500/20 py-4 flex flex-col space-y-4 px-6">
+              {["#servicos", "#projetos", "#sobre", "#tecnologias", "#contato"].map((href, i) => (
+                <a
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="hover:text-purple-400 transition-colors text-lg"
+                >
+                  {["Serviços", "Projetos", "Nossa Jornada", "Tecnologias", "Contato"][i]}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 
@@ -113,7 +128,7 @@ export default function SuperNovaPortfolio() {
           </div>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-4">Desenvolvendo o futuro, uma linha de código por vez</p>
-          <p className="text-lg text-purple-300 mb-8">Especialistas em Websites e Aplicativos</p>
+          <p className="text-lg text-purple-300 mb-8">Full-Stack · Mobile · AI Engineering · Sistemas Escaláveis</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -248,6 +263,7 @@ export default function SuperNovaPortfolio() {
                   <li>• Sistemas de gestão</li>
                   <li>• Desenvolvimento full-stack</li>
                   <li>• Arquitetura escalável</li>
+                  <li>• Auth completa: Google, Apple, Facebook, JWT</li>
                   <li>• Integrações com APIs externas e dispositivos</li>
                 </ul>
                 <Button
@@ -614,7 +630,8 @@ export default function SuperNovaPortfolio() {
                   <p>• Projetos: US Construction Marketplace, FazendaOn, FastPower, LigDoctor, InovaBot</p>
                   <p>• AI Engineering: WhatsApp bots, n8n, Claude API, automação de processos</p>
                   <p>• DevOps: Docker, DigitalOcean, Railway, Coolify, GitHub Actions</p>
-                  <p>• Segurança: anti-phishing, verificação SMS, autenticação, detecção de bots</p>
+                  <p>• Auth: Firebase Auth, OAuth (Google, Apple, Facebook), JWT, verificação SMS</p>
+                  <p>• Segurança: anti-phishing, detecção de bots, proteção contra ataques Unicode</p>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-6">
                   {["React", "Next.js", "Flutter", "Go", "TypeScript", "Firebase", "PostgreSQL", "Docker", "Node.js", "Kotlin"].map((tech) => (
@@ -719,6 +736,7 @@ export default function SuperNovaPortfolio() {
                     <div className="flex space-x-4">
                       <Button
                         size="sm"
+                        onClick={() => window.open("https://github.com/lucasmello-dev", "_blank")}
                         className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500"
                       >
                         <Github className="w-4 h-4 mr-2" />
