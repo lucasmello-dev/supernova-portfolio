@@ -292,11 +292,11 @@ export default function SuperNovaPortfolio() {
                   <Badge className="bg-purple-500/20 text-purple-300">Tailwind CSS</Badge>
                 </div>
                 <Button
-                  onClick={() => handleWhatsAppRedirect("Olá! Gostaria de saber mais sobre o projeto Psicólogo João Pedro Martins.")}
+                  onClick={() => window.open("https://psicologojoaopedromartins.netlify.app/", "_blank")}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 mt-auto"
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Saiba Mais
+                  <Globe className="w-4 h-4 mr-2" />
+                  Ver Site
                 </Button>
               </CardContent>
             </Card>
@@ -304,11 +304,13 @@ export default function SuperNovaPortfolio() {
             {/* Project 2 — Fazenda On (phone mockup, side by side) */}
             <Card className="cosmic-card bg-[#161b22]/80 border-purple-500/30 backdrop-blur-sm group hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex justify-center gap-3 mb-4 bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-lg p-4">
-                  <div className="w-[120px] h-[240px] bg-black rounded-[24px] border-2 border-gray-600 overflow-hidden shadow-xl flex-shrink-0">
+                <div className="relative flex justify-center items-center mb-4 bg-gradient-to-br from-green-900/40 to-emerald-900/20 rounded-lg p-4 h-[220px]">
+                  {/* Back phone - splash */}
+                  <div className="absolute left-[18%] top-6 w-[95px] h-[190px] bg-black rounded-[20px] border-2 border-gray-700 overflow-hidden shadow-lg opacity-75 rotate-[-4deg]">
                     <img src="/fazendaon-splash.png" alt="FazendaOn splash" className="w-full h-full object-cover" />
                   </div>
-                  <div className="w-[120px] h-[240px] bg-black rounded-[24px] border-2 border-gray-600 overflow-hidden shadow-xl flex-shrink-0">
+                  {/* Front phone - dashboard */}
+                  <div className="relative w-[105px] h-[210px] bg-black rounded-[22px] border-2 border-green-500/60 overflow-hidden shadow-2xl ml-12 z-10">
                     <img src="/fazendaon-dashboard.png" alt="FazendaOn dashboard" className="w-full h-full object-cover" />
                   </div>
                 </div>
